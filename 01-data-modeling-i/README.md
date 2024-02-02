@@ -2,10 +2,12 @@
 
 ## What is this Data Model ?
 
+[![image.png](https://i.postimg.cc/j5rGdCNk/image.png)](https://postimg.cc/HJBS6Y6Q)
+
 ```sh
 Data Model นี้ ออกแบบมาเพื่อเก็บข้อมูลเหตุการณ์ (Event) ที่เกิดขึ้นใน Github จาก Data ที่มีอยู่ โดยประกอบด้วย 3 Table 
 
-[image.png](https://postimg.cc/HJBS6Y6Q)
+
 
 [![image.png](https://i.postimg.cc/1zt3yCGj/image.png)](https://postimg.cc/nXyJk1w4)
 
