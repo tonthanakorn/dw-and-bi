@@ -1,12 +1,17 @@
 # Data Modeling I
 
-## Data model
+## What is this Data Model ?
 
 ```sh
 Data Model นี้ ออกแบบมาเพื่อเก็บข้อมูลเหตุการณ์ (Event) ที่เกิดขึ้นใน Github จาก Data ที่มีอยู่ โดยประกอบด้วย 3 Table ได้แก่
 1. events ใช้เก็บ Data Event ต่าง ๆ ที่เกิดขึ้น ว่าใครเป็นผู้กระทำ (actor_id) และกระทำใน Repository ใด (repo_id) 
 2. actors ใช้เก็บ Data ของ Actor (ผู้กระทำ) ว่า id นี้ คือใคร (login)
 3. repos ใช้เก็บ Data ของ Repository (พื้นที่เก็บข้อมูล) ว่าการกระทำนี้กระทำใน Repository ใด (name)
+```
+### Benefits of this Data Model
+
+```sh
+Data Model นี้ สามารถทำให้ทราบว่าเหตุการณ์ต่าง ๆ ที่เกิดขึ้น (Event) เกิดจากใคร (Actor) และกระทำใน Repository ใด เพื่อให้สามารถติดตามกิจกรรม (event) ของผู้ใช้งาน (actor) และวิเคราะห์ทิศทางของเหตุการณ์ที่เกิดขึ้นในพื้นที่เก็บข้อมูล (Repository) นั้น ๆ ได้
 ```
 
 ## Getting Started
