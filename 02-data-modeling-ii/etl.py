@@ -101,39 +101,40 @@ def process(session, filepath):
                 insert_data(session, each)
 
 def insert_data(session, each):
-    actor_id = str(each["actor"]["id"])
+    actor_id = int(each["actor"]["id"])
     insert_statement = f"""
                     INSERT INTO actors (
                         id,
                         login
-                    ) VALUES ({each["actor"]["id"]}, 
+                    ) VALUES ({actor_id}, 
                     '{each["actor"]["login"]}')
                 """
     session.execute(insert_statement)
     
-    event_id = str(each["id"])
+    event_id = each["id"]
+    repo_id = int(each["repo"]["id"])
     insert_statement = f"""
                     INSERT INTO events (
                         id,
                         type,
                         actor_id,
                         repo_id
-                    ) VALUES ('{each["id"]}', 
+                    ) VALUES ('{event_id}', 
                     '{each["type"]}', 
-                    '{each["actor"]["id"]}', 
-                    '{each["repo"]["id"]}')
+                    {actor_id}, 
+                    {repo_id})
                 """
     session.execute(insert_statement)
     
-    repo_id = each["repo"]["id"]
     insert_statement = f"""
                     INSERT INTO repos (
                         id,
                         name
-                    ) VALUES ({each["repo"]["id"]}, 
+                    ) VALUES ({repo_id}, 
                     '{each["repo"]["name"]}')
                 """
     session.execute(insert_statement)
+
 
 def insert_sample_data(session):
     query = f"""
