@@ -15,7 +15,7 @@ Project: Building a Data Modeling with Cassandra (NoSQL)  นี้ สามา
 เพื่อให้สามารถติดตามกิจกรรม (event) ของผู้ใช้งาน (actor) และวิเคราะห์ทิศทางของเหตุการณ์ที่เกิดขึ้นในพื้นที่เก็บข้อมูล
 (Repository) นั้น ๆ ได้
 
-## instruction ใน Terminal
+## Instruction ใน Terminal
 
 เปลี่ยนพื้นที่ไปที่ 02-data-modeling-ii โดยใช้คำสั่ง
 ```sh

@@ -41,43 +41,33 @@ Data Model นี้ สามารถทำให้ทราบว่าเ�
 (Repository) นั้น ๆ ได้
 ```
 
-## Getting Started
+## instruction ใน Terminal
 
+เปลี่ยนพื้นที่ไปที่ 01-data-modeling-i โดยใช้คำสั่ง
 ```sh
-python -m venv ENV
-source ENV/bin/activate
-pip install -r requirements.txt
+ cd 01-data-modeling-i/
+```
+ลงเว็ปเซิฟเวอร์ docker nginx
+```sh
+docker run -p 8080:80 ngix
 ```
 
-### Prerequisite when install psycopg2 package
-
-For Debian/Ubuntu users:
-
-```sh
-sudo apt install -y libpq-dev
-```
-
-For Mac users:
-
-```sh
-brew install postgresql
-```
-
-## Running Postgres
-
+ติดตั้ง Postgres โดยใช้คำสั่ง 
 ```sh
 docker-compose up
 ```
 
-To shutdown, press Ctrl+C and run:
-
+ติดตั้ง Python เพื่อให้ codespace สามารถรันโค้ด Python ได้ โดยใช้คำสั่ง
 ```sh
-docker-compose down
+pip install psycopg2
 ```
 
-## Running ETL Scripts
-
+ทำสร้าง Table ไปยัง Postgres โดยใช้คำสั่ง
 ```sh
 python create_tables.py
+```
+
+ทำ ETL จากข้อมูล JSON โหลดเข้าไปใน Postgres โดยใช้คำสั่ง
+```sh
 python etl.py
 ```
