@@ -117,10 +117,12 @@ def insert_data(session, each):
                     INSERT INTO events (
                         id,
                         type,
+                        public,
                         actor_id,
                         repo_id
                     ) VALUES ('{event_id}', 
-                    '{each["type"]}', 
+                    '{each["type"]}',
+                    {each["public"]}, 
                     {actor_id}, 
                     {repo_id})
                 """
@@ -134,6 +136,7 @@ def insert_data(session, each):
                     '{each["repo"]["name"]}')
                 """
     session.execute(insert_statement)
+
 
 
 def insert_sample_data(session):
