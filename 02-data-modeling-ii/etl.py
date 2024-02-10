@@ -128,7 +128,7 @@ def insert_data(session, each):
     session.execute(insert_statement)
     
     repo_id = each["repo"]["id"]
-     insert_statement = f"""
+    insert_statement = f"""
                     INSERT INTO repos (
                         id,
                         name
