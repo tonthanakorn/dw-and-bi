@@ -6,26 +6,53 @@ from typing import List
 from cassandra.cluster import Cluster
 
 
-table_drop = "DROP TABLE events"
+table_drop_events = "DROP TABLE IF EXISTS events"
+table_drop_actors = "DROP TABLE IF EXISTS actors"
+table_drop_repos = "DROP TABLE IF EXISTS repos"
 
-table_create = """
+table_create_events = """
     CREATE TABLE IF NOT EXISTS events
     (
         id text,
         type text,
         public boolean,
+        actor_id int,
+        repo_id int,
         PRIMARY KEY (
             id,
             type
-        )
+        ),
+        CONSTRAINT fk_actor FOREIGN KEY(actor_id) REFERENCES actors(id),
+        CONSTRAINT fk_repo FOREIGN KEY(repo_id) REFERENCES repos(id)
+    )
+"""
+
+table_create_actors = """
+    CREATE TABLE IF NOT EXISTS actors (
+        id int,
+        login text,
+        PRIMARY KEY(id)
+    )
+
+"""
+
+table_create_repos = """
+    CREATE TABLE IF NOT EXISTS repos (
+        id int,
+        name text,
+        PRIMARY KEY(id)
     )
 """
 
 create_table_queries = [
-    table_create,
+    table_create_actors,
+    table_create_repos,
+    table_create_events,
 ]
 drop_table_queries = [
-    table_drop,
+    table_drop_events,
+    table_drop_actors,
+    table_drop_repos,
 ]
 
 def drop_tables(session):
@@ -73,7 +100,42 @@ def process(session, filepath):
                 print(each["id"], each["type"], each["actor"]["login"])
 
                 # Insert data into tables here
+                insert_data(session, each)
 
+def insert_data(session, each):
+    actor_id = str(each["actor"]["id"])
+    insert_statement = f"""
+                    INSERT INTO actors (
+                        id,
+                        login
+                    ) VALUES ({each["actor"]["id"]}, 
+                    '{each["actor"]["login"]}')
+                """
+    session.execute(insert_statement)
+    
+    event_id = str(each["id"])
+    insert_statement = f"""
+                    INSERT INTO events (
+                        id,
+                        type,
+                        actor_id,
+                        repo_id
+                    ) VALUES ('{each["id"]}', 
+                    '{each["type"]}', 
+                    '{each["actor"]["id"]}', 
+                    '{each["repo"]["id"]}')
+                """
+    session.execute(insert_statement)
+    
+    repo_id = each["repo"]["id"]
+     insert_statement = f"""
+                    INSERT INTO repos (
+                        id,
+                        name
+                    ) VALUES ({each["repo"]["id"]}, 
+                    '{each["repo"]["name"]}')
+                """
+    session.execute(insert_statement)
 
 def insert_sample_data(session):
     query = f"""
