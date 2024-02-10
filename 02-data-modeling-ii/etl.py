@@ -168,8 +168,9 @@ def main():
     drop_tables(session)
     create_tables(session)
 
-    # process(session, filepath="../data")
-    insert_sample_data(session)
+    process(session, filepath="../data")
+    
+    # insert_sample_data(session)
 
     # Select data in Cassandra and print them to stdout
     query = """
