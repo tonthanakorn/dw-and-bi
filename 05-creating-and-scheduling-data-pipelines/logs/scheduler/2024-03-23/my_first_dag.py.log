@@ -2502,3 +2502,17 @@ TypeError: __init__() got an unexpected keyword argument 'tagห'
 [2024-03-23T11:49:42.232+0000] {logging_mixin.py:117} INFO - [2024-03-23T11:49:42.232+0000] {dag.py:2573} INFO - Sync 1 DAGs
 [2024-03-23T11:49:42.264+0000] {logging_mixin.py:117} INFO - [2024-03-23T11:49:42.263+0000] {dag.py:3328} INFO - Setting next_dagrun for my_first_dag to None, run_after=None
 [2024-03-23T11:49:42.293+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/my_first_dag.py took 0.125 seconds
+[2024-03-23T11:50:13.150+0000] {processor.py:156} INFO - Started process (PID=49204) to work on /opt/airflow/dags/my_first_dag.py
+[2024-03-23T11:50:13.151+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/my_first_dag.py for tasks to queue
+[2024-03-23T11:50:13.152+0000] {logging_mixin.py:117} INFO - [2024-03-23T11:50:13.152+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/my_first_dag.py
+[2024-03-23T11:50:13.168+0000] {processor.py:768} INFO - DAG(s) dict_keys(['my_first_dag']) retrieved from /opt/airflow/dags/my_first_dag.py
+[2024-03-23T11:50:13.215+0000] {logging_mixin.py:117} INFO - [2024-03-23T11:50:13.215+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2024-03-23T11:50:13.249+0000] {logging_mixin.py:117} INFO - [2024-03-23T11:50:13.248+0000] {dag.py:3328} INFO - Setting next_dagrun for my_first_dag to None, run_after=None
+[2024-03-23T11:50:13.275+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/my_first_dag.py took 0.128 seconds
+[2024-03-23T11:50:43.432+0000] {processor.py:156} INFO - Started process (PID=49412) to work on /opt/airflow/dags/my_first_dag.py
+[2024-03-23T11:50:43.433+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/my_first_dag.py for tasks to queue
+[2024-03-23T11:50:43.434+0000] {logging_mixin.py:117} INFO - [2024-03-23T11:50:43.434+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/my_first_dag.py
+[2024-03-23T11:50:43.452+0000] {processor.py:768} INFO - DAG(s) dict_keys(['my_first_dag']) retrieved from /opt/airflow/dags/my_first_dag.py
+[2024-03-23T11:50:43.522+0000] {logging_mixin.py:117} INFO - [2024-03-23T11:50:43.522+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2024-03-23T11:50:43.556+0000] {logging_mixin.py:117} INFO - [2024-03-23T11:50:43.556+0000] {dag.py:3328} INFO - Setting next_dagrun for my_first_dag to None, run_after=None
+[2024-03-23T11:50:43.581+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/my_first_dag.py took 0.152 seconds
