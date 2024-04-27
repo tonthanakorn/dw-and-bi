@@ -42,7 +42,7 @@ def main(dataset_id, table_id, file_path):
 
     # โค้ดส่วนนี้จะเป็นการสร้าง Client เชื่อมต่อไปยังโปรเจค GCP ของเรา โดยใช้ Credentials ที่
     # สร้างจากโค้ดข้างต้น
-    project_id = "ds525-417015"
+    project_id = "delta-cosmos-413911.03github"
     client = bigquery.Client(
         project=project_id,
         credentials=credentials,
