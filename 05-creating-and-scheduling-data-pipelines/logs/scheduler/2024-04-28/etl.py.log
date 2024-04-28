@@ -226,3 +226,31 @@ NameError: name '_get_files' is not defined
 [2024-04-28T09:32:35.757+0000] {logging_mixin.py:117} INFO - [2024-04-28T09:32:35.757+0000] {dag.py:2573} INFO - Sync 1 DAGs
 [2024-04-28T09:32:35.794+0000] {logging_mixin.py:117} INFO - [2024-04-28T09:32:35.794+0000] {dag.py:3328} INFO - Setting next_dagrun for etl to 2024-04-28T00:00:00+00:00, run_after=2024-04-29T00:00:00+00:00
 [2024-04-28T09:32:35.819+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/etl.py took 0.182 seconds
+[2024-04-28T09:33:06.371+0000] {processor.py:156} INFO - Started process (PID=83880) to work on /opt/airflow/dags/etl.py
+[2024-04-28T09:33:06.374+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/etl.py for tasks to queue
+[2024-04-28T09:33:06.375+0000] {logging_mixin.py:117} INFO - [2024-04-28T09:33:06.375+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/etl.py
+[2024-04-28T09:33:06.416+0000] {processor.py:768} INFO - DAG(s) dict_keys(['etl']) retrieved from /opt/airflow/dags/etl.py
+[2024-04-28T09:33:06.463+0000] {logging_mixin.py:117} INFO - [2024-04-28T09:33:06.463+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2024-04-28T09:33:06.496+0000] {logging_mixin.py:117} INFO - [2024-04-28T09:33:06.495+0000] {dag.py:3328} INFO - Setting next_dagrun for etl to 2024-04-28T00:00:00+00:00, run_after=2024-04-29T00:00:00+00:00
+[2024-04-28T09:33:06.541+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/etl.py took 0.175 seconds
+[2024-04-28T09:33:36.663+0000] {processor.py:156} INFO - Started process (PID=84092) to work on /opt/airflow/dags/etl.py
+[2024-04-28T09:33:36.664+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/etl.py for tasks to queue
+[2024-04-28T09:33:36.665+0000] {logging_mixin.py:117} INFO - [2024-04-28T09:33:36.665+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/etl.py
+[2024-04-28T09:33:36.693+0000] {processor.py:768} INFO - DAG(s) dict_keys(['etl']) retrieved from /opt/airflow/dags/etl.py
+[2024-04-28T09:33:36.726+0000] {logging_mixin.py:117} INFO - [2024-04-28T09:33:36.726+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2024-04-28T09:33:36.749+0000] {logging_mixin.py:117} INFO - [2024-04-28T09:33:36.749+0000] {dag.py:3328} INFO - Setting next_dagrun for etl to 2024-04-28T00:00:00+00:00, run_after=2024-04-29T00:00:00+00:00
+[2024-04-28T09:33:36.771+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/etl.py took 0.110 seconds
+[2024-04-28T09:34:07.524+0000] {processor.py:156} INFO - Started process (PID=84316) to work on /opt/airflow/dags/etl.py
+[2024-04-28T09:34:07.524+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/etl.py for tasks to queue
+[2024-04-28T09:34:07.525+0000] {logging_mixin.py:117} INFO - [2024-04-28T09:34:07.525+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/etl.py
+[2024-04-28T09:34:07.560+0000] {processor.py:768} INFO - DAG(s) dict_keys(['etl']) retrieved from /opt/airflow/dags/etl.py
+[2024-04-28T09:34:07.606+0000] {logging_mixin.py:117} INFO - [2024-04-28T09:34:07.605+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2024-04-28T09:34:07.644+0000] {logging_mixin.py:117} INFO - [2024-04-28T09:34:07.644+0000] {dag.py:3328} INFO - Setting next_dagrun for etl to 2024-04-28T00:00:00+00:00, run_after=2024-04-29T00:00:00+00:00
+[2024-04-28T09:34:07.672+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/etl.py took 0.151 seconds
+[2024-04-28T09:34:38.029+0000] {processor.py:156} INFO - Started process (PID=84540) to work on /opt/airflow/dags/etl.py
+[2024-04-28T09:34:38.030+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/etl.py for tasks to queue
+[2024-04-28T09:34:38.031+0000] {logging_mixin.py:117} INFO - [2024-04-28T09:34:38.031+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/etl.py
+[2024-04-28T09:34:38.084+0000] {processor.py:768} INFO - DAG(s) dict_keys(['etl']) retrieved from /opt/airflow/dags/etl.py
+[2024-04-28T09:34:38.167+0000] {logging_mixin.py:117} INFO - [2024-04-28T09:34:38.167+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2024-04-28T09:34:38.199+0000] {logging_mixin.py:117} INFO - [2024-04-28T09:34:38.199+0000] {dag.py:3328} INFO - Setting next_dagrun for etl to 2024-04-28T00:00:00+00:00, run_after=2024-04-29T00:00:00+00:00
+[2024-04-28T09:34:38.232+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/etl.py took 0.206 seconds
