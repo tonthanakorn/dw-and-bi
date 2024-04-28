@@ -74,17 +74,3 @@ join {{ ref('stg__jaffle_shop_customers')}} as c
 on o.user_id = c.id
 ```
 หลังจากนี้ผู้ใช้สามารถดึงข้อมูลจาก jaffle_shop_obt.sql ไปใช้งานต่อได้
-
-
-```bash
-python -m venv ENV
-source ENV/bin/activate
-pip install -r requirements.txt
-```
-
-```bash
-cd ds525
-dbt debug
-dbt run
-dbt test
-```
