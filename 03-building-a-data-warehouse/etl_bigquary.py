@@ -98,4 +98,4 @@ if __name__ == "__main__":
                                      each["repo"]["name"],
                                     ])
 
-    main(dataset_id="github", table_id="events", file_path="github_events.csv")
+    main(dataset_id="GitHub", table_id="events", file_path="github_events.csv")
