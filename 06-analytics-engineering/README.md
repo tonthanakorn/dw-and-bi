@@ -10,10 +10,11 @@ cd 06-analytics-engineering
 docker-compose up
 ```
 3. เชื่อมต่อเพื่อใช้งาน postgres บน dbt ได้ที่ port 3000 โดยสามารถดู Username และ Password ได้จากไฟล์ docker-compose.yml และ sign in เพื่อเข้าสู่ระบบ
-4. เปิดการใช้ virtual environment โดยใช้คำสั่ง
+4. เปิดการใช้ virtual environment และติดตั้ง package ที่จำเป็น โดยใช้คำสั่ง
 ```sh
 python -m venv ENV
 source ENV/bin/activate
+pip install -r requirements.txt
 ```
 5. ติดตั้งเพื่อใช้งาน dbt เข้ากับ postgres โดยใช้คำสั่ง
 ```sh
